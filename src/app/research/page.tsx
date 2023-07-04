@@ -16,7 +16,7 @@ export default async function Research() {
         "researchFile": file.asset->url
     }`);
 
-    return <div className="container mx-auto p-6">{research.map(research => <ListItem
+    return <div className="container mx-auto p-6">{[...research].reverse().map(research => <ListItem
         key={research._id}
         id={research._id}
         title={research.title}

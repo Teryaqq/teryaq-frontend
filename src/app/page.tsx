@@ -1,12 +1,7 @@
 import Hero from "@/components/Hero";
 import InfoBox from "@/components/InfoBox";
 import ServiceBox from "@/components/ServiceBox";
-import { Metadata } from "next";
 import { BsHeartFill, BsSearch, BsCardChecklist, BsChatFill, BsPersonFill, BsCardText, BsClockHistory, BsBellFill } from "react-icons/bs";
-
-export const metadata: Metadata = {
-    title: "Teryaq"
-};
 
 export default function Home() {
     return (

@@ -2,6 +2,18 @@ import Link from "next/link";
 import { client } from "@/lib/sanityClient";
 import { BsFilePdfFill } from "react-icons/bs";
 
+export async function generateMetadata({ params }: {
+    params: { id: string; };
+}) {
+
+    const { id } = params;
+    const res = await client.fetch(`*[_type == "research" && _id == "${id}"]{title,description,"fileUrl": file.asset->url}[0]`);
+
+    return {
+        title: res.title,
+    }
+}
+
 export default async function ResearchPage({ params }: {
     params: { id: string; };
 }) {
