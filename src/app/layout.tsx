@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
     title: 'Teryaq',
     description: 'Teryaq is a group of students who are totally immersed in health and its sectors',
+    keywords: ["drugs", "reasearch", "JU students", "diseases", "pharmacy", "parma research"],
 }
 
 export default function RootLayout({
