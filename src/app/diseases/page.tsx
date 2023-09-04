@@ -7,6 +7,8 @@ interface DiseaseItem {
     overview: string;
 }
 
+export const revalidate = 0;
+
 export default async function Diseases() {
 
     const diseases: DiseaseItem[] = await client.fetch(`*[_type == "disease"]{

@@ -8,6 +8,8 @@ type ResearchListItem = {
     researchFile: string;
 };
 
+export const revalidate = 0;
+
 export default async function Research() {
     const research: ResearchListItem[] = await client.fetch(`*[_type == "research"]{
         title,
